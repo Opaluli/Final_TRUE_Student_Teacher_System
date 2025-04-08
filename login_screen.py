@@ -3,6 +3,7 @@ from base_screen import BaseScreen
 from text_input import TextInput
 from data import get_user_by_credentials
 
+
 class LoginScreen(BaseScreen):
     def __init__(self, screen):
         super().__init__(screen)
@@ -30,7 +31,7 @@ class LoginScreen(BaseScreen):
             if self.login_button.collidepoint(event.pos):
                 return self.try_login()
 
-    def draw(self, screen):
+    def draw8(self, screen):
         super().draw()
         self.username_input.draw(self.screen)
         self.password_input.draw(self.screen)
