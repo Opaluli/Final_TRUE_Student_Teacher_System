@@ -5,15 +5,15 @@ class StudentHomeScreen(BaseScreen):
     def __init__(self, screen):
         super().__init__(screen)
         self.font = pygame.font.Font(None, 40)
-        self.teacher_button = pygame.Rect(300, 250, 200, 60)
-        self.selected_teacher = None
+        self.math_button = pygame.Rect(300, 250, 200, 60)
+        self.selected_subject = None
 
     def handle_event(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN:
-            if self.teacher_button.collidepoint(event.pos):
-                self.selected_teacher = "teacher_yossi"
-                print("Selected teacher: teacher_yossi")
-                return "student_request"  # next screen we will create later
+            if self.math_button.collidepoint(event.pos):
+                self.selected_subject = f"math"
+                print("Selected subject - Math")
+                return "student_request"
 
     def draw(self, screen):
         self.screen = screen
